@@ -18,3 +18,5 @@ Route::get('/clearance-requests', [ClearanceRequestController::class, 'index']);
 Route::get('/clearance-requests/create', [ClearanceRequestController::class, 'create']);
 Route::post('/clearance-requests', [ClearanceRequestController::class, 'store']);
 
+// For Print of Clearance
+Route::get('/clearance-requests/{id}/print', [ClearanceRequestController::class, 'print'])->name('clearance-requests.print');

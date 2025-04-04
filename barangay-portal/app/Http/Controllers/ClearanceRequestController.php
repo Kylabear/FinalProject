@@ -38,4 +38,15 @@ class ClearanceRequestController extends Controller
 
         return redirect('/clearance-requests')->with('success', 'Clearance request submitted!');
     }
+
+
+    /**
+     * Print Clearance form request.
+     */
+    public function print($id)
+{
+    $request = ClearanceRequest::findOrFail($id);
+    return view('clearance_requests.print', compact('request'));
+}
+
 }
